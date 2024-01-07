@@ -1,0 +1,40 @@
+GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTUxMzU4ODEsImV4cCI6MTYxNTEzNTg5NiwiYXVkIjoiNjA0NDM5NDcxYWVmOWM5NzllOGY4NTgxIiwiaXNzIjoicG91ZGVsLmNvbSJ9.qSZdTeBhdkv7quKq-1YQ3gzCGwT5IBQzku5jGgdOHNI
+
+###
+
+GET http://localhost:3000/abc-x
+
+### Login Route
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "develop.mnku2@gmail.com",
+    "password": "12345"
+}
+
+### Refresh Token Route
+POST http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTUxMzkxNTQsImV4cCI6MTY0NjY5Njc1NCwiYXVkIjoiNjA0NDM5NDcxYWVmOWM5NzllOGY4NTgxIiwiaXNzIjoicG91ZGVsLmNvbSJ9.JOE8CHfJXBgOzKePvlCof0t1jPWBsQi3ughOYJdpLRI"
+}
+
+### Logout Route
+DELETE http://localhost:3000/auth/logout
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTUxMzg1NDAsImV4cCI6MTY0NjY5NjE0MCwiYXVkIjoiNjA0NDM5NDcxYWVmOWM5NzllOGY4NTgxIiwiaXNzIjoicG91ZGVsLmNvbSJ9.gwHpfSKMD7mkCmvJzaZf7dKGqvyKKLfrVWXGyeAgS0A"
+}
+### Register Route
+
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "email": "develop.mnku@gmail.com",
+    "password": "12345"
+}
